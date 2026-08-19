@@ -949,7 +949,13 @@ async function submitRSVP() {
 
 <!-- MUSIC -->
 
+<audio id="bg-music" loop>
+  <source src="music.m4a" type="audio/mp4">
+</audio>
 
+<button id="music-btn" onclick="toggleMusic()" aria-label="Музыка">
+  <span id="music-icon">♪</span>
+</button>
 
 <style>
 @font-face {
