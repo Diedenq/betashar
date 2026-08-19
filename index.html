@@ -19,7 +19,7 @@
   --cream:      #ffffff;
   --beige:      #f5f5f5;
   --warm:       #eeeeee;
-  --gold:       #c9a96e;
+  --gold:       #91681d;
   --gold-light: #e8d5a3;
   --gold-dark:  #a07840;
   --rust:       #b5622a;
@@ -300,8 +300,10 @@ section {
 /* ════════════════════════════
    RSVP
 ════════════════════════════ */
+
+
 .rsvp-section {
-  background: linear-gradient(160deg, #d4aa6a 0%, #f0d080 100%); color: #fff;
+  background: linear-gradient(160deg, #97784a 0%, #b3aea4 100%); color: #fff;
   padding: 60px 24px calc(60px + env(safe-area-inset-bottom,0px));
   position: relative; overflow: hidden;
 }
@@ -395,6 +397,9 @@ section {
   font-size: 24px; color: #fff; margin-bottom: 8px;
 }
 .form-success small { color: rgba(255,255,255,0.65); font-size: 12px; font-style: italic; }
+
+
+
 
 /* ════════════════════════════
    FOOTER
@@ -797,6 +802,60 @@ footer.visible small { opacity: 1; }
 
 <!-- ════ RSVP ════ -->
 
+<!-- ════ RSVP ════ -->
+<div class="rsvp-section">
+  <div class="rsvp-inner">
+    <p class="section-label">Растау</p>
+    <h2 class="section-title">Бізбен бірге боласыз ба?</h2>
+    
+
+    <div id="rsvp-form" style="margin-top:30px">
+      <div class="form-group">
+        <label>Есіміңіз</label>
+        <input type="text" id="f-name" placeholder="Аты-жөніңіз" autocomplete="name">
+      </div>
+      <div class="form-group" style="margin-top:14px">
+        <label>Келесіз бе?</label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="attend" value="yes"><div class="radio-dot"></div>Келемін</label>
+          <label class="radio-label"><input type="radio" name="attend" value="no"><div class="radio-dot"></div>Келе алмаймын</label>
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:14px">
+        <label>Қонақтар саны</label>
+        <select id="f-guests" onchange="toggleCustomGuests(this)">
+          <option value="">Таңдаңыз</option>
+          <option value="1">1 — тек мен</option>
+          <option value="2">2 — екеуміз</option>
+          <option value="3">3 адам</option>
+          <option value="4">4 адам</option>
+          <option value="5">5 адам</option>
+          <option value="other">Басқа саны</option>
+        </select>
+        <div class="guests-custom" id="guests-custom">
+          <input type="number" id="f-guests-custom" placeholder="Санын жазыңыз" min="1" max="50" style="margin-top:8px">
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:14px">
+        <label>Жұпқа тілегіңіз</label>
+        <textarea id="f-wish" rows="3" placeholder="Жақсы сөздеріңіз..."></textarea>
+      </div>
+      <button class="submit-btn" id="submit-btn" onclick="submitRSVP()">Жіберу</button>
+    </div>
+
+    <div class="form-success" id="form-success">
+      <div class="checkmark">✦</div>
+      <p>Рахмет!</p>
+      <small>Сізбен кездесуді асыға күтеміз</small>
+    </div>
+
+    <div style="margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.25);text-align:center;">
+      <p style="font-family:'KzSignPainter',cursive;font-size:clamp(20px,5.5vw,28px);color:rgba(255,255,255,0.9);margin-bottom:14px;font-weight:400;letter-spacing:1px;">Той иелері</p>
+      <p style="font-family:'KzSignPainter',cursive;font-size:clamp(32px,9vw,58px);font-weight:400;color:#fff;line-height:1.1;letter-spacing:1px;">Ашхабад<span style="font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,0.7);font-size:0.7em;display:block;line-height:1.4;font-weight:300;">&amp;</span>Роза</p>
+    </div>
+
+  </div>
+</div>
 <!-- ════ FOOTER ════ -->
 <footer>
   <svg viewBox="0 0 200 32" height="28" style="display:block;margin:0 auto 16px;opacity:0.3" xmlns="http://www.w3.org/2000/svg">
